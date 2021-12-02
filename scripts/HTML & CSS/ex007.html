@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software de login</title>
+</head>
+<body>
+                <h6 class="t1"> Faça login</h6>
+                <input class="cx1" type="email" name="mail"> 
+                <input class="cx2" type="password" name="senha">
+                <input class="b1" type="button" value= "Entrar" onclick="logar()"> 
+                <div class="div1"><strong>EMAIL</strong></div>
+                <div class="div2"><strong>SENHA</strong></div> 
+            <style>
+               h6 {color: yellow; }
+               h6 {font: normal 30pt Arial Black;}
+                body {background-color: teal;}
+                .cx1 {
+                    position: absolute;
+                    top: 30%;
+                    left: 37.9%;
+                    height: 5%;
+                    width: 22%;
+                }
+                .cx2 {
+                    position: absolute;
+                    top: 37%;
+                    left: 37.9%;
+                    height: 5%;
+                    width: 22%;
+                }
+                .div1 {
+                    position: absolute;
+                    top: 31.2%;
+                    left: 32.7%;
+                    color: yellow;
+                    font: normal Arial Black;
+                }
+                .div2 { 
+                    position: absolute;
+                    top: 38.6%;
+                    left: 32.7%;
+                    color: yellow;
+                    font: normal Arial Black;
+}
+                .b1 {
+                    position: absolute;
+                    top: 43.78%;
+                    left: 47.1%;
+                    color: yellow;                    
+                    font: normal Arial Black;
+                    background: black;
+                } 
+                .t1 {
+                    position: absolute;
+                    top: 3%;
+                    left: 40.17%;
+                }
+            </style>
+    <script>
+        
+        function logar() { 
+            var e1 = document.getElementsByClassName('cx1')  //sistema login
+            var e2 = document.getElementsByClassName('cx2')
+            var te1 = (e1.value)
+            var te2 = (e2.value)
+            window.confirm(`Essa é sua conta?  ${te1} ${te2}`) //concatenar 
+        }
+       
+    </script>
+</body>
+</html>

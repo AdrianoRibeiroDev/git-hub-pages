@@ -1,0 +1,75 @@
+body {
+    background-color: turquoise;
+}
+
+h3 {
+    text-align: center;
+    font: normal 50px Arial Black;
+    background-color: rgb(2, 172, 172);
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+    padding: 15px;
+    margin: auto;
+}
+
+section {
+    position: relative;
+    margin: auto;
+    border-radius: 50px;
+    padding: 60px;
+    background-color: rgb(2, 172, 172);
+    top: 10px;
+    height: 300px;
+}
+
+header {
+    text-align: center;
+    border-radius: 50px; 
+}
+
+.quest {
+    padding: 10px;
+    width: 500px;
+    color: white;
+    background-color: rgb(122, 122, 122);
+}
+
+.an {
+    text-align: center;
+    color: white;
+}
+
+.enter {
+    text-align: center;
+    position: relative;
+    top: -30px;
+    border-radius: 15px;
+    padding: 10px;
+    margin: auto;
+    color: white;
+    background-color: rgb(34, 151, 140);
+    width: 70px;
+    height: 30px;
+    font: normal 13px Arial;
+    box-shadow: rgb(63, 62, 62);
+}
+
+.se1 {
+    position: relative;
+    margin: auto;
+    border-radius: 50px;
+    padding: 30px;
+    background-color: rgb(2, 172, 172);
+    top: -150px;
+    height: 300px;
+}
+
+.c {
+    margin: auto;
+    color: white;
+    background-color:teal;
+    font: normal 20px Arial;
+    padding: 10px;
+    border-radius: 50px;
+    width: 100px;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h3>Bem Vindo!</h3>
+        <p class="p2">FaceRed</p>
+    </header>
+    <section class="cx1">
+        <div id="foto"><img src="R.jfif" alt="IMG"></div>
+        <div><input type="button" value="Carregar" onmouseup="load()"></div>    
+        <div id="txtn1"></div>
+    </section>
+    <section class="cx2">
+         <div id="posts"></div>
+        <div id="txtn2"></div> 
+        <div id="txtn3"><input type="button" value="Enviar" onmouseup="enviado()"></div>
+    </section>
+    <script>
+        
+        function load() {
+            let txt = document.getElementById('txtn1') 
+            txt.innerHTML = '<input type="button" value="Msg" onmouseup="msg()">' 
+        }
+        function msg() {
+            let cx1 = document.getElementById('txtn2')
+            cx1.innerHTML = '<input id="env" type="text">'
+        }
+        function enviado() {
+            let res = document.getElementById('env')
+            let pst = document.getElementById('posts')
+            pst.outerHTML = res.value
+        }
+    </script>
+    <footer>
+        <p class="p1"></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,50 @@
+body {
+    background: linear-gradient(45deg,royalblue,teal,turquoise);
+    background-size: 300% 300%;
+    align-items: center;
+    justify-content: center;
+    place-items: center
+}
+
+h6 {
+    color: white;
+    font: normal 50px Arial Black;
+    text-align: center;
+}
+
+.hamb {
+    color: transparent;
+    font: normal 30px Arial;
+    width: 90px;
+    height: 40px;
+    text-align: end;
+    background: turquoise;
+    border-radius: 10px;
+    background-position: 0%;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.hamb:hover {
+    cursor: grab;
+    width: 1230px;
+    font-size: 31px;
+    text-align: end;
+    color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+    background-position: 100%;
+    animation-name: box;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 1  s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes box {
+    from {
+        height: 40px;
+    }
+    to {
+        height: 400px;
+    }
+}

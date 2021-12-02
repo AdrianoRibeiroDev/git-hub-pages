@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title> <link rel="stylesheet" href=".css">
+</head>
+<body>
+    <header>
+        <h1>É NOVO AQUI?</h1>
+    </header>
+    <section class="se1">
+        <p>Passo 1</p>
+        <p>Insira seu email na caixa da esquerda</p>
+        <p>Passo 2</p>
+        <p>Insira sua senha na caixa do meio</p>
+        <p>Passo 3</p>
+        <p>Insira seu Nome de usuário na caixa da direita</p>
+        <input type="button" value="Criar Conta" onmouseup="openc()" class="Bc2">
+        <div id="cx1"></div>
+        <div id="cx2"></div>
+        <div id="cx4"></div>
+        <div id="cx3"></div>
+        <div id="cx5"></div>
+        <div id="iniciar"></div>
+        <div id="cx6"></div>
+        <div id="cx7"></div>
+    </section>
+    
+    <script>
+        function openc() {
+    let create = document.getElementById('cx1')
+    let createp = document.getElementById('cx2')
+    let createu = document.getElementById('cx4')
+    let criar = document.getElementById('cx3')
+    let fechar = document.getElementById('cx5')
+   create.outerHTML = '<input type="email" name="gmail" id="gm">'
+   createp.outerHTML = '<input type="password" name="password" id="sen">'
+   createp.innerHTML = '<input type="button" value="Fechar" class="Bc3">'
+   createu.outerHTML = '<input type="text" name="" id="us">'
+   criar.outerHTML = '<input type="button" value="Criar Agora!" class="Bc" onmouseup="start()">'
+   fechar.innerHTML = '<input type="button" value="Fechar" class="Bc">'
+}
+        function start() {
+            let cmc = document.getElementById('iniciar')
+            let copyrigth = document.getElementById('cx6')
+            let gmail = document.getElementById('gm')
+            let senha = document.getElementById('sen')
+            let name = document.getElementById('us')
+            let tes1 = document.getElementById('cx7')
+            let user = window.prompt('Confirmar nome de usuário')
+            cmc.outerHTML = '<section class="se2" id="res"></section>'
+            let res1 = document.getElementById('res')
+            copyrigth.innerHTML = '<p class="copy">©Adriano Ribeiro</p>'
+           
+            if (user != name) {window.alert(`Nome Inválido`)}
+            if (user === name) {window.alert(`Bem Vindo ${user}`)}
+            
+        }
+    </script>
+</body>
+</html>

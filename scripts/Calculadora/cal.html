@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+       .fundo {
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .calculadora {
+            position: absolute;
+            background: rgb(31,31,31);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 15px;
+        }
+        .botao {
+            background-color:rgb(0, 0, 0);
+            border: none;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            margin: 1px;
+            color: #fff;
+        }
+        .botao:hover {
+            background-color: #fff;
+            background-color:rgba(255, 255, 255, 0.63);
+            border: #fff;
+        }
+        .bot {
+            position: fixed;
+            height: 106px;
+            top: 259px;
+            background-color:rgb(44, 44, 44);
+            border: none;
+            cursor: pointer;
+            width: 50px;
+            margin: 1px;
+            color: white;
+        }
+        .bot:hover {
+            position: fixed;
+            height: 106px;
+            top: 259px;
+            background-color:rgba(255, 255, 255, 0.63);
+            border: none;
+            cursor: pointer;
+            width: 50px;
+            margin: 1px;
+            color: white;
+        }
+        #resultado {
+            width: 207px;
+            height: 40px;
+            margin: 5px;
+            background-color: rgb(31,31,31);
+            color: rgb(255, 255, 255);
+            text-align: right;
+            padding: 5px;
+            font: normal 30px Arial;
+        }
+        .botaos {
+            background-color:rgb(44, 44, 44);
+            border: none;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            margin: 1px;
+            color: white;
+        }
+        .botaos:hover {
+            background-color:rgba(255, 255, 255, 0.63);
+        }
+        .menu:hover{
+            cursor: pointer;
+            color: grey;
+        }
+        .men {
+            font: normal 15px Arial;
+            text-align: left;
+        }
+        .meme {
+            position: absolute;
+            top: 3%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 258px;
+            height: 163px;
+        }
+        .cop {
+            text-align: center;
+            color: black;
+            animation-name: surge;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+        }
+        @keyframes surge {
+            from {transform: translate(-50%, -50%);}
+            to{text-align: center;}
+        }
+    </style>
+</head>
+<body>
+    <div class="fundo">
+    <div class="calculadora">
+        <p onclick="menu()" class="menu">≡Padrão</p>
+        <p id="resultado"></p>
+        <table>
+        <tr>
+            <td><button class="botaos" onclick="clean()">C</button></td>
+            <td><button class="botaos" onclick="back()">⌫</button></td>
+            <td><button class="botaos" onclick="insert('/')" style="font-size: 20px;">÷</button></td>
+            <td><button class="botaos" onclick="insert('*')">x</button></td>
+        </tr>
+        <tr>
+            <td><button class="botao" onclick="insert('7')">7</button></td>
+            <td><button class="botao" onclick="insert('8')">8</button></td>
+            <td><button class="botao" onclick="insert('9')">9</button></td>
+            <td><button class="botaos" onclick="insert('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button class="botao" onclick="insert('4')">4</button></td>
+            <td><button class="botao" onclick="insert('5')">5</button></td>
+            <td><button class="botao" onclick="insert('6')">6</button></td>
+            <td><button class="botaos" onclick="insert('+')">+</button></td>
+        </tr>
+        <tr>
+            <td><button class="botao" onclick="insert('1')">1</button></td>
+            <td><button class="botao" onclick="insert('2')">2</button></td>
+            <td><button class="botao" onclick="insert('3')">3</button></td>
+            <td><button class="bot" onclick="calcular()">=</button></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button class="botao" style="width: 106px;" onclick="insert('0')">0</button></td>
+            <td rowspan="2"><button class="botao" onclick="insert('.')">.</button></td>
+        </tr>
+        </table>
+</div>
+    </div>
+        <p class="cop">ⒸAdriano C. Ribeiro (pra ganhar do lucas)</p>
+    <script>
+        function insert(num) {
+            let numero = document.getElementById('resultado').innerHTML
+            document.getElementById('resultado').innerHTML = numero + num
+        }
+        function clean() {
+            document.getElementById('resultado').innerHTML = "" 
+        }
+        function back() {
+            var resultado = document.getElementById('resultado').innerHTML
+            document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length -1)
+        }
+        function calcular() {
+            var resultado = document.getElementById('resultado').innerHTML
+            if(resultado)
+            {
+                document.getElementById('resultado').innerHTML = eval(resultado)
+            } 
+            else {
+                window.alert('favor inserir os números')
+            }
+        }
+        function menu()
+        {
+            document.getElementById('resultado').innerHTML = '<img src="OIP.jfif" alt="OIP.jfif" class="meme">'
+        }
+    </script>
+</body>
+</html>

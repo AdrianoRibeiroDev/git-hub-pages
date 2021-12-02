@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .kb {
+            position: absolute;
+            background: rgb(31,31,31);
+            padding: 15px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 15px;
+            width: 400px;
+            height: 400px;
+        }
+        input {
+            position: relative;
+            top: 16%;
+            left: 50%;
+            width: 280px;
+            height: 37px;
+            transform: translate(-50%, -50%);
+            background: grey;
+            border-radius: 5px;
+            color: rgb(0, 0, 0);
+        }
+        input:hover {
+            cursor: text;
+            background: #fff;
+        }
+        .btn {
+            position: relative;
+            border-radius: 15px;
+            background: royalblue;
+            color: white;
+            border: none;
+            padding: 0;
+            width: 280px;
+            height: 100px;
+            transform: translate(-50%, -50%);
+            top: 102px;
+            text-align: center;
+            transition: all 0.5s;
+        }
+        .btn:hover {
+            background: skyblue;
+            cursor: pointer;
+        }
+        p {
+            color: white;
+            font: normal 30px Arial Black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="kb">
+        <p>Log-in</p>
+        <input type="email" name="" id="email">
+        <br><br><br>
+        <input type="password" name="" id="senha">
+        <br><br><br>
+        <input type="submit" value="Logar" class="btn" onclick="insert()">
+    </div>
+    <script>
+        function insert() {
+            let res = document.getElementById('email')
+            let res2 = document.getElementById('senha')
+            if(res.value & res2.value) {
+                window.alert('conta criada com sucesso')
+            }
+            else {
+                window.alert('falha ao registrar conta')
+            }
+        }
+    </script>
+    <script src=".js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+.se1 {
+    text-align: center;
+}
+
+.se2 {
+    position: relative;
+    top: -400px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 300px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgb(48, 48, 48);
+}
+
+h1 {
+    text-align: center;
+    color: greenyellow;
+    font: normal 50px Arial Black;
+}
+
+body {
+    background-color: rgb(28, 196, 196)
+}
+
+.cri {
+    text-align: center;
+    color: white;
+    font: normal 30px Arial Black;
+}
+
+.reg {
+    text-align: center;
+    color: white;
+    font: normal 20px Arial;
+}
+
+.Bc {
+    color: white;
+    background-color: tomato;
+    
+}
+
+.Bc2{
+    color: white;
+    background-color: tomato;
+}
+p {
+    color: greenyellow;
+    text-align: end;
+    font: normal 15px Arial Black;
+}
+
+input {
+    color: rgb(0, 0, 0);
+    background-color: bisque;   
+}
+
+.copy {
+    color: greenyellow;
+    text-align: center;
+    font: normal 15px Arial Black;
+}
+

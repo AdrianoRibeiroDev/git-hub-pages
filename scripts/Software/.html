@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> <link rel="stylesheet" href=".css">
+</head>
+<body>
+    <header>
+            <h3>Flush</h3>
+    </header>
+    <section>
+        <header>
+            <div class="enter" onmouseup="start()">Corrigir Código</div>
+        <input type="text" class="quest" id="input1" onkeyup="analyze()" onkeydown="analyze2()">
+            <div id="cx1"></div>
+            
+        </header>
+        <footer id="test">
+
+        </footer>
+    </section>
+    <script>
+      function analyze() {
+          let ptest = document.getElementById('test')
+          ptest.innerHTML = '<p class="an">Analizando...</p>'
+      }
+      function analyze2() {
+          let ptest = document.getElementById('test')
+          ptest.innerHTML = '<p class="an">Analizando..</p>'
+      }
+      function start() {
+        let item = document.getElementById('cx1')
+        var res = document.getElementById('input1')
+        item.innerHTML = res.value
+        item.outerHTML = '<section class="se1"> <div id="cx2"></div> <div id="cx3"></div> <div id="cx4"></div></section>'
+        let item2 = document.getElementById('cx2')
+        item2.outerHTML = '<p class="c" onmouseup="exb()">Correção</p>'
+    }
+    function exb() {
+        let item3 = document.getElementById('cx3')
+        let res = document.getElementById('input1')
+        item3.innerHTML = res.value
+    }
+
+    if (res.value = i || f || e || l || s || e || f || u || n || c || t || i || o || n || l || e || t || v || a || r || c || o || n || s || t) {
+        let resp = document.getElementById('cx4')
+        resp.innerText = 'conceitos de correção: if() {} else{} function() let= var= const= {}' 
+    }
+    </script>
+</body>
+</html>
